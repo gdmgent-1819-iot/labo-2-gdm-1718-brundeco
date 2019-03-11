@@ -19,11 +19,8 @@ def fetchProfile():
         'firstname': str(json_data['name']['first']),
         'lastname': str(json_data['name']['last']),
         'age': str(json_data['dob']['age']),
-        # 'state': null
-    }
-    
+    } 
     print profileObj
-
     profileStr = profileObj['firstname'] + ' ' + profileObj['lastname'] + ' ' + profileObj['age']
 fetchProfile()
 
