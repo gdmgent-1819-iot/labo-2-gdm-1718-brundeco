@@ -1,7 +1,7 @@
 
 # Data ophalen van randomuser api, gebruik maken van json request
 
-# Profiel opslaan als object
+# Profiel opslaan als object in data.json
 
 # Profiel weergeven op leds van de sense hat
 

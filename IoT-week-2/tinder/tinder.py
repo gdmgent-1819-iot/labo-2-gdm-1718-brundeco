@@ -18,13 +18,12 @@ def fetchProfile():
     json_data = requests.get(url).json()['results'][0] 
     global profileObj
     global profileStr
-    global led_string 
 
     profileObj = {
         'firstname': str(json_data['name']['first']),
         'lastname': str(json_data['name']['last']),
         'age': str(json_data['dob']['age']),
-        'state': ''
+        'rating': ''
     }
     
     profileStr = profileObj['firstname'] + ' ' + profileObj['lastname'] + ' ' + profileObj['age']
@@ -32,17 +31,17 @@ fetchProfile()
 
 
 # define like function, triggered on joystick left movement
-# adds a state of 'liked' to object and add object to data.json
+# adds a rating of 'liked' to object and add object to data.json
 def like(profileObj):
     with open("data.json", "a") as json_file:
-        profileObj['state'] = 'liked'
+        profileObj['rating'] = 'liked'
         json_file.write("{}\n".format(json.dumps(profileObj)))
 
 # define skip function, triggered on joystick right movement
-# adds a state of 'skipped' to object and add object to data.json
+# adds a rating of 'skipped' to object and add object to data.json
 def skip(profileObj):
     with open("data.json", "a") as json_file:
-        profileObj['state'] = 'skipped'
+        profileObj['rating'] = 'skipped'
         json_file.write("{}\n".format(json.dumps(profileObj)))
 
 
@@ -51,12 +50,12 @@ def main():
         for event in sense.stick.get_events():
             if event.action == "pressed":
                 if event.direction == "left":
-                    print('left')
+                    print('Like this person')
                     like(profileObj)
                     sense.show_message(profileStr, text_colour=display_colour)
                     fetchProfile()
                 elif event.direction == "right":
-                    print('right')
+                    print('Skip this person')
                     skip(profileObj)
                     sense.show_message(profileStr, text_colour=display_colour)
                     fetchProfile()

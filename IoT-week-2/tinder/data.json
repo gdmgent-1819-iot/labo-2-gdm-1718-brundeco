@@ -1,8 +1,5 @@
-{"lastname": "pelto", "age": "61", "firstname": "joel"}
-{"lastname": "soto", "age": "74", "firstname": "lucas or luke"}
-{"lastname": "halonen", "age": "72", "firstname": "julia"}
-{"lastname": "little", "age": "72", "state": "liked", "firstname": "amanda"}
-{"lastname": "castro", "age": "33", "state": "skipped", "firstname": "ulisses"}
-{"lastname": "dumas", "age": "30", "state": "liked", "firstname": "roy"}
-{"lastname": "meehan", "age": "61", "state": "skipped", "firstname": "willard"}
-{"lastname": "oliver", "age": "47", "state": "liked", "firstname": "charlotte"}
+{"lastname": "little", "age": "49", "firstname": "christina", "rating": "skipped"}
+{"lastname": "pedersen", "age": "29", "firstname": "sara", "rating": "skipped"}
+{"lastname": "charles", "age": "55", "firstname": "dan", "rating": "liked"}
+{"lastname": "reite", "age": "64", "firstname": "mark", "rating": "skipped"}
+{"lastname": "lopes", "age": "23", "firstname": "cleonei", "rating": "liked"}
